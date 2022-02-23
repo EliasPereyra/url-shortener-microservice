@@ -21,7 +21,7 @@ app.get('/api/hello', function(req, res) {
   res.json({ greeting: 'hello API' });
 });
 
-app.post('/api/shorturl/:url', function(req,res){
+app.post('/api/shorturl', function(req,res){
   const url = req.body
   res.json({ original_url: url, short_url: '' })
 })
