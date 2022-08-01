@@ -12,7 +12,7 @@ module.exports = function () {
     console.log(`Database connected to: ${mongo_uri}`)
   })
 
-  mongoose.connection.on('disconnected', () => console.warning('DB disconnected!'))
+  mongoose.connection.on('disconnected', () => console.error('DB disconnected!'))
 
   mongoose.connection.on('error', (e) => {
     console.error(`Error at connecting with db: ${e}`)
